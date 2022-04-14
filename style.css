@@ -1,0 +1,26 @@
+.body {
+    overflow: hidden;
+}
+
+.bi-tools {
+    font-size: 200px;
+}
+
+.bi-patch-check {
+    font-size: 200px;
+}
+
+.bi-bookmark-check {
+    font-size: 200px;
+}
+
+.home-card {
+    margin: 15px 15px;
+}
+
+.footer {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
