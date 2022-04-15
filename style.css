@@ -24,3 +24,29 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+@media (min-height: 680px), screen and (orientation: portrait) {
+    .navbar-social-links {
+        justify-content: center;
+    }
+    .showcase-text {
+        text-align: center;
+    }
+    .bi-tools {
+        font-size: 150px;
+        padding: 10px 10px;
+    }
+    .news-panel{
+        padding: 15px 15px;
+    }
+    .bi-patch-check {
+        font-size: 150px;
+        padding: 10px 10px;
+    }
+    .dev-program-text {
+        text-align: center;
+    }
+    .news-title {
+        text-align: center;
+    }
+}
