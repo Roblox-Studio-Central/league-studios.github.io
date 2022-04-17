@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roblox Studio Central | Module Scripts</title>
+    <meta name="description" content="Helping developers since 2020.">
+    <meta name="author" content="LMVM2041">
+    <link rel="shortcut icon" type="image/png" href="/photos/70498afc3da608fa6f6a84889dca00dc.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&amp;display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family: 'Manrope', sans-serif; background-color: rgb(33, 33, 33); color: white;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2e2e2e;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index">
+                <img src="/photos/70498afc3da608fa6f6a84889dca00dc.png" alt="Roblox Studio Central Logo" width="40"
+                    height="40">
+                <span class="p-3">Roblox Studio Central</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/developer-program">Developer Program</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Tutorials
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!--N/A-->
+                            <a class="dropdown-item" href="/tutorials/module-scripts">
+                                <li>Module Scripts</li>
+                            </a>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex navbar-social-links" style="padding-right: 5px;">
+                    <a class="text-light p-2" style="font-size:25px;" href="https://discord.gg/8ZYAAVr5r5"><i
+                            class="bi bi-discord"></i></a>
+                    <a class="text-light p-2" style="font-size:25px;" href="https://twitter.com/rsc_roblox"><i
+                            class="bi bi-twitter"></i></a>
+                    <a class="text-light p-2" style="font-size:25px;" href="https://youtube.com/robloxstudiocentral"><i
+                            class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function CopyToClipboard(id) {
+            var r = document.createRange();
+            r.selectNode(document.getElementById(id));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+
+    <!--Page START-->
+
+    <section class="showcase" style="padding-top: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 dev-program-text">
+                    <h3 class="text-left text-uppercase" style="padding-top: 8%;">Module Scripts</h3>
+                    <small class="text-muted">
+                        Pass values, functions and tables in one script and access it everywhere! All module scripts
+                        inside of ReplicatedStorage will be able to be accessed in all local scripts. All module scripts
+                        in ServerScriptService can be accessed in all server scripts.
+                    </small>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="text-center">
+                        <i class="bi bi-bookmark-check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <hr>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>What are Module Scripts?</h2>
+                <p class="text-muted">Module scripts are very useful scripts used by many developers on Roblox. The
+                    primary use of those scripts is to run a function. Before you ask, yes it is possible to run a
+                    function in a normal script. The only problem with this is that the more and more you use it, it
+                    gets very messy. Module scripts help keep that function, along with values (settings, levels, etc),
+                    and tables with information!</p>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <img src="/photos/Screen Shot 2022-04-15 at 5.46.46 PM.png"
+                    alt="Screenshot of objects menu with module script" height="300px" width="300px">
+            </div>
+        </div>
+        <h2>How can I use Module Scripts?</h2>
+        <p class="text-muted">Using module scripts is easy once you get used to using them! An easy way to get started
+            is by testing code! Let's begin!</p>
+        <p class="text-muted">1. On the right side of "ServerScriptService", click the + button</p><span><img
+                src="/photos/Screen Shot 2022-04-15 at 5.53.18 PM.png"
+                alt="ServerScriptService tab with plus button on the right side" width="200px"
+                style="padding:10px 5px;"></span>
+        <p class="text-muted">2. In the objects menu, select "ModuleScript".</p>
+        <p class="text-muted">3. Remove all the current code inside of the script.</p>
+        <p class="text-muted">4. We must open the module script! The code below defines a variable with an empty table
+            and
+            returns the table in the last line. All the other code will run in between these 2 lines.</p>
+        <div class="code-block light-theme" style="width: 100%;">
+            <div class="tab-content" id="nav-tabContent" style="border: 0px">
+                <div class="tab-pane active" id="nav-code-1" role="tabpanel" aria-labelledby="nav-code-tab-1">
+                    <pre class="prettyprint linenums: lang-lua" id="id_0"><ol class="linenums"><li class="L1"><span class="pln">    </span><span class="kwd">local</span><span class="pln"> testmodule </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{}<li class="L2"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> testmodule</span>
+                </div>
+                <a class="btn btn-outline-primary text-light" onclick="CopyToClipboard('nav-code-1')">Copy to Clipboard</a>
+            </div>
+        </div>
+        <p class="text-muted" style="padding-top: 15px;">5. Now that we actually have some code, let's create a function! The function below is a simple function which prints <span><code>Hello Robloxians</code></span> in the output!</p>
+        <div class="code-block light-theme" style="width: 100%;">
+            <div class="tab-content" id="nav-tabContent" style="border: 0px">
+                <div class="tab-pane active" id="nav-code-2" role="tabpanel" aria-labelledby="nav-code-tab-1">
+                    <pre class="prettyprint linenums: lang-lua" id="id_0"><ol class="linenums"><li class="L1"><span class="pln">    </span><span class="kwd">local</span><span class="pln"> testmodule </span><span class="pun">=</span><span class="kwd"></span><span class="pun">{}</span><li class="L2"></li><li class="L3"><span class="pln">    </span><span class="kwd">function</span><span class="pln"> printHello.testModule()</span><li class="L4"><span class="pln">    </span><span class="kwd">    print("Hello Robloxians!")</span></li><li class="L5"><span class="pln">    </span><span class="kwd">end</span></li><li class="L6"></li><li class="L7"><span class="pln">    </span><span class="kwd">return testModule</span></li>
+                </div>
+                <a class="btn btn-outline-primary text-light" onclick="CopyToClipboard('nav-code-2')">Copy to Clipboard</a>
+            </div>
+        </div>
+        <p class="text-muted" style="padding-top: 15px;">6. We are done with the module script for now. What this script is doing is it's holding a function which can be run in any server script. It helps keep the code organized in one script! You can hold as many functions and tables as you'd like in just one module script.</p>
+        <p class="text-muted">7. Create a new <span><a href="https://developer.roblox.com/en-us/api-reference/class/Script" style="text-decoration: none;">Server Script</a></span> inside of Server Script Serivce.</p>
+        <p class="text-muted">8. Clear all the current code!</p>
+        <p class="text-muted">9. The first thing we must do is require the module script using a variable like the one below!</p>
+        <div class="code-block light-theme" style="width: 100%;">
+            <div class="tab-content" id="nav-tabContent" style="border: 0px">
+                <div class="tab-pane active" id="nav-code-3" role="tabpanel" aria-labelledby="nav-code-tab-1">
+                    <pre class="prettyprint linenums: lang-lua" id="id_0"><ol class="linenums"><li class="L1"><span class="pln">    </span><span class="kwd">local moduleScript = require(game:GetService("ServerScriptService"):WaitForChild("ModuleScript") -- You must require the module script in ServerScriptService. Change if you renamed your script!</span></li>
+                </div>
+                <a class="btn btn-outline-primary text-light" onclick="CopyToClipboard('nav-code-3')">Copy to Clipboard</a>
+            </div>
+        </div>
+        <p class="text-muted" style="padding-top: 15px;">10. Now we can print the function!</p>
+        <div class="code-block light-theme" style="width: 100%;">
+            <div class="tab-content" id="nav-tabContent" style="border: 0px">
+                <div class="tab-pane active" id="nav-code-3" role="tabpanel" aria-labelledby="nav-code-tab-1">
+                    <pre class="prettyprint linenums: lang-lua" id="id_0"><ol class="linenums"><li class="L1"><span class="pln">    </span><span class="kwd">local moduleScript = require(game:GetService("ServerScriptService"):WaitForChild("ModuleScript")</span></li><li class="L2"><span class="pln">    </span><span class="kwd">moduleScript.testModule()</span></li>
+                </div>
+                <a class="btn btn-outline-primary text-light" onclick="CopyToClipboard('nav-code-3')">Copy to Clipboard</a>
+            </div>
+        </div>
+        <p class="text-muted" style="padding-top: 15px;">We're done! Now you can go test the script!</p>
+        <figure>
+            <blockquote class="blockquote">
+              <p>Written and editted by LMVM2041 <span><img
+                    src="https://images-ext-2.discordapp.net/external/bCHc-hSR_djtXqs2JD6fE81b2hMLqUzy8lgxz5Qc9lI/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/707632091168374866/99ba324e56238a698e264531c63d8ff8.png"
+                    alt="LMVM2041 Profile Picture // Discord" width="25px" height="25px"
+                    style="border-radius: 100%;"></span></p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Roblox Studio Central Owner
+            </figcaption>
+          </figure>
+    </div>
+    <div class="container">
+        <hr>
+    </div>
+    <div class="container">
+        <h2>YouTube Video - Module Scripts</h2>
+        <div class="row">
+            <div class="col">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/lRRBWLeYBTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="py-2" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <section class="footer">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col" style="font-size: x-large;">
+                    <a class="text-light p-1" href="https://discord.gg/8ZYAAVr5r5"><i class="bi bi-discord"></i></a>
+                    <a class="text-light p-1" href="https://twitter.com/rsc_roblox"><i class="bi bi-twitter"></i></a>
+                    <a class="text-light p-1" href="https://youtube.com/robloxstudiocentral"><i
+                            class="bi bi-youtube"></i></a>
+                    <p class="text-muted text-start" style="font-size: small;">Roblox Studio Central | Website is NOT
+                        affliated
+                        with Roblox &copy; or the Roblox
+                        Corporation &copy;</p>
+                </div>
+                <div class="col footer-link-css">
+                    <a class="text-muted d-flex justify-content-center"
+                        style="font-size: medium; padding-top: 34px; text-decoration: none;"
+                        href="mailto:lmvm2041@gmail.com?subject=[SUPPORT]%20Roblox%20Studio%20Central">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
