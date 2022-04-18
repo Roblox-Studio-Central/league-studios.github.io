@@ -46,4 +46,11 @@
     .dev-program-text {
         text-align: center;
     }
+    .author-image {
+        visibility: hidden;
+    }
+
+    .announcement-title {
+        font-size: x-small;
+    }
 }
