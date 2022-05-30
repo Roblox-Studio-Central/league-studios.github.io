@@ -38,6 +38,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 
+.login-member:hover {
+    color: black;
+}
+
 @media (max-width: 680px) {
     .navbar-social-links {
         justify-content: center;
