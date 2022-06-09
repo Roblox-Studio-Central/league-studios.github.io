@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "discord.js": "^13.8.0"
+  }
+}

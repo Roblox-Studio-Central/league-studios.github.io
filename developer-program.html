@@ -95,16 +95,30 @@
 
   <section class="showcase" style="padding-top: 100px;">
     <div class="container">
+      <div class="alert alert-success alert-dismissible fade show" id="success-message" role="alert"
+        style="display:none;">
+        <span><i class="bi bi-check2-circle"></i></span> Application Submitted Successfully!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <div class="alert alert-danger alert-dismissible fade show" id="error-message" role="alert" style="display:none;">
+        <span><i class="bi bi-exclamation-octagon"></i></span> There was an error when submitting your application.
+        Please try again later!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
       <div class="row">
         <div class="col-lg-6 col-md-12 dev-program-text">
           <h3 class="text-left text-uppercase" style="padding-top: 8%;">Verified Developer Program</h3>
-          <small class="text-muted">
+          <p class="text-muted">
             Roblox Studio Central provides a free verification program for all developers&#0134;. The
             program allows you to receieve a "Verified Developer" role in our Discord server, and lets other
             developers know you're legit! More information can be found in our Discord server!
-          </small>
-          <div class="text-left" style="padding-top: 20px;">
-            <a class="btn btn-primary" href="https://discord.gg/8ZYAAVr5r5">Join our Discord</a>
+          </p>
+          <p class="text-muted">
+            Are you a developer and want to stand out with a cool <span class="text-light">Verified Developer
+              Role</span> in our server? Apply below:
+          </p>
+          <div class="text-left" style="padding-top: 20px; padding-bottom: 10px;">
+            <a class="btn btn-primary" href="verified-developer-application">Apply</a>
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
@@ -140,6 +154,21 @@
       </div>
     </div>
   </section>
+  <script>
+    window.onload = function () {
+      let cookie = localStorage.getItem('application');
+
+      if (cookie) {
+        if (cookie === 'true') {
+          let success = document.getElementById('success-message');
+          success.style.display = 'block';
+        } else {
+          let error = document.getElementById('error-message');
+          error.style.display = 'block';
+        }
+      }
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
