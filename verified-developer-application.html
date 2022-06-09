@@ -100,7 +100,7 @@
                 <div class="col-lg-6 col-md-12 dev-program-text">
                     <h3 class="text-left text-uppercase" style="padding-top: 8%; padding-bottom: 10px;">Verified
                         Developer Program Application</h3>
-                    <form onsubmit="sendResults(event)" id="submit-form">
+                    <form onsubmit="sendResults()" id="submit-form">
                         <div class="mb-3">
                             <label for="verified-developer-program-name" class="form-label">Discord Tag (i.e.
                                 League#0001)</label>
@@ -148,8 +148,7 @@
                         </div>
                     </form>
                     <script>
-                        async function sendResults(ev) {
-                            ev.preventDefault();
+                        async function sendResults() {
                             let discordTag = document.getElementById('verified-developer-program-name-input').value;
                             let robloxName = document.getElementById('verified-developer-program-robloxName-input').value;
                             let experience = document.getElementById('verified-developer-program-experience-input').value;
