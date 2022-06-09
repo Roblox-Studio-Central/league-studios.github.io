@@ -162,9 +162,11 @@
         if (cookie === 'true') {
           let success = document.getElementById('success-message');
           success.style.display = 'block';
+          localStorage.removeItem('application');
         } else {
           let error = document.getElementById('error-message');
           error.style.display = 'block';
+          localStorage.removeItem('application');
         }
       }
     }
