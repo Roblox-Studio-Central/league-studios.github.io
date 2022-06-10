@@ -156,6 +156,8 @@
                             let proof2 = document.getElementById('verified-developer-program-proof2-input').value;
                             let proof3 = document.getElementById('verified-developer-program-proof3-input').value;
 
+                            const data = require('data.json');
+
                             const webhookBody = {
                                 embeds: [{
                                     title: 'Verified Developer Application',
@@ -182,7 +184,7 @@
                                 }],
                             };
 
-                            const webhookURL = "https://discord.com/api/webhooks/984590639062736946/IiR5nf_xhLG-b8gcfF2SKCtjm9Kp2jU8qYG8G2c3jsUSpEWITIiXmmhVVVYgYXcFOVrg";
+                            const webhookURL = data.webhookURL;
                             const response = await fetch(webhookURL, {
                                 method: 'POST',
                                 headers: {
