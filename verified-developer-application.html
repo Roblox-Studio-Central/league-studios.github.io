@@ -100,7 +100,7 @@
                 <div class="col-lg-6 col-md-12 dev-program-text">
                     <h3 class="text-left text-uppercase" style="padding-top: 8%; padding-bottom: 10px;">Verified
                         Developer Program Application</h3>
-                    <form onsubmit="sendResults(event)" id="submit-form">
+                    <form id="submit-form" onsubmit="sendResults(event)">
                         <div class="mb-3">
                             <label for="verified-developer-program-name" class="form-label">Discord Tag (i.e.
                                 League#0001)</label>
@@ -147,61 +147,7 @@
                                 Application</button>
                         </div>
                     </form>
-                    <script>
-                        async function sendResults(ev) {
-                            ev.preventDefaults();
-                            let discordTag = document.getElementById('verified-developer-program-name-input').value;
-                            let robloxName = document.getElementById('verified-developer-program-robloxName-input').value;
-                            let experience = document.getElementById('verified-developer-program-experience-input').value;
-                            let proof1 = document.getElementById('verified-developer-program-proof1-input').value;
-                            let proof2 = document.getElementById('verified-developer-program-proof2-input').value;
-                            let proof3 = document.getElementById('verified-developer-program-proof3-input').value;
-
-                            const data = require('data.json');
-
-                            const webhookBody = {
-                                embeds: [{
-                                    title: 'Verified Developer Application',
-                                    fields: [
-                                        {
-                                            name: 'Discord Tag', value: discordTag
-                                        },
-                                        {
-                                            name: 'Roblox Username', value: robloxName
-                                        },
-                                        {
-                                            name: 'Experience (YEARS)', value: experience
-                                        },
-                                        {
-                                            name: 'Proof Link 1', value: proof1
-                                        },
-                                        {
-                                            name: 'Proof Link 2', value: proof2
-                                        },
-                                        {
-                                            name: 'Proof Link 3', value: proof3
-                                        }
-                                    ]
-                                }],
-                            };
-                            const webhookURL = data.webhookURL;
-                            const response = await fetch(webhookURL, {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                body: JSON.stringify(webhookBody),
-                            });
-                            if (response.ok) {
-                                localStorage.setItem('application', 'true');
-                                window.location.replace('https://robloxstudiocentral.xyz/developer-program');
-                            } else {
-                                localStorage.setItem('application', 'false');
-                                window.location.replace('https://robloxstudiocentral.xyz/developer-program');
-                            }
-                        }
-
-                    </script>
+                    <script type="text/javascript" src="./application.js"></script>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <h3 class="text-center text-uppercase" style="padding-top: 8%; padding-bottom: 10px;">Requirements
